@@ -1,0 +1,58 @@
+body {
+  margin: 0; padding: 0; font-family: sans-serif;
+  background: #000; color: #fff;
+  display: flex; align-items: center; justify-content: center; height: 100vh;
+  overflow: hidden;
+}
+#splash { position: absolute; width:100%; height:100%; background:#000; display:flex; align-items:center; justify-content:center; z-index:10; transition: opacity .5s;}
+#app { display:none; width:100%; max-width:400px; margin:auto; opacity:0; transition: opacity .5s;}
+.gluu-logo {
+  font-size:4rem; color: #0f0;
+  animation: glow 2s infinite alternate;
+  font-family: 'Brush Script MT', cursive;
+}
+@keyframes glow {
+  0% { text-shadow:0 0 10px #0f0; }
+  100% { text-shadow:0 0 20px #0f0,0 0 30px #0f0; }
+}
+
+.app-header { display: flex; justify-content: space-between; padding:10px; }
+#login-section, #reg-section { margin-bottom:10px; display:flex; flex-direction:column; gap:5px; animation: fadeIn .5s;}
+@keyframes fadeIn { from { opacity: 0; } to { opacity:1; } }
+
+.feed { overflow-y: auto; height: calc(100vh - 100px); padding-bottom:10px; }
+.video-card {
+  background:#111; margin:10px;
+  border-radius:8px; overflow:hidden;
+  position: relative; animation: appear .5s ease;
+}
+@keyframes appear { from { transform: scale(.9); opacity:0 } to { transform: scale(1); opacity:1 } }
+
+.video-card iframe {
+  width:100%; display: block; aspect-ratio: 9/16;
+}
+.video-actions {
+  display:flex; justify-content: space-around; padding:10px;
+}
+.video-actions button {
+  background:transparent; border:none; color:#0f0; font-size:1.2rem;
+  cursor:pointer; transition: color .3s;
+}
+.video-actions button:hover { color: lime; }
+
+.comments {
+  background:#222; padding:10px; max-height:200px; overflow-y:auto;
+}
+.comment { margin-bottom:5px; border-bottom:1px solid #333; padding:5px 0; }
+
+.input-section {
+  display:flex; gap:5px; padding:10px;
+}
+.input-section textarea {
+  flex:1; padding:5px; resize:none;
+}
+.input-section button {
+  background:#0f0; color:#000; border:none; padding:8px 12px;
+  cursor:pointer; transition: background .3s;
+}
+.input-section button:hover { background: limegreen; }
