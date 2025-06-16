@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>gluu</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="splash">
+    <h1 class="gluu-logo">gluu</h1>
+  </div>
+
+  <div id="app">
+    <div id="login-section">
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="login-btn">Login</button>
+      <p id="login-msg"></p>
+    </div>
+    <div id="reg-section">
+      <input type="text" id="reg-username" placeholder="Username" />
+      <input type="email" id="reg-email" placeholder="Email for Sign‑up" />
+      <input type="password" id="reg-password" placeholder="Password" />
+      <button id="reg-btn">Register</button>
+      <p id="reg-msg"></p>
+    </div>
+    <div class="app-header">
+      <button id="post-bot">➕ Bot</button>
+      <button id="logout-btn" style="display:none">Logout</button>
+    </div>
+    <div class="feed" id="feed"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
