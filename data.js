@@ -27,7 +27,6 @@ const GluuData = (() => {
   const likeVideo = (id) => {
     const video = videos.find(v => v.id === id);
     if (video) video.likes++;
-    
     return video.likes;
   };
 
